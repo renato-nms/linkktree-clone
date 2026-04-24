@@ -1,0 +1,25 @@
+
+
+a {
+    text-decoration: none; /* Remove a decoração de texto padrão dos links */
+    color: var(--cor-secundaria); /* Define a cor do texto dos links usando uma variável CSS personalizada */
+    display: flex; /* Define o elemento como um contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do contêiner flexível */
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    border-radius: 12px;
+    font-size: 1.2rem; /* Define o tamanho da fonte dos links */
+    padding: 18px;
+    margin: 10px;
+    position: relative; /* Define a posição do elemento como relativa para permitir o posicionamento absoluto de elementos filhos */
+    transition: 0.3s ease-in; /* Adiciona uma transição suave para as propriedades que mudam, com duração de 0.3 segundos e efeito de easing "ease-in" */
+}
+
+a:hover {
+    transform : scale(1.05); /* Aumenta o tamanho do elemento em 5% quando o mouse estiver sobre ele */
+}
+
+.conteudo_links {
+    max-width: 800px;
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    background-color: white;
+}
