@@ -1,11 +1,11 @@
 :root {
-   --cor-bg: #222831;
-  --cor-secundaria: #acacac;
+   --cor-bg: #000000;
+  --cor-secundaria: #ffe600;
   --cor-terciaria: #fff;
 }
 
 body {
   background-color: var(--cor-bg);
   color: var(--cor-secundaria);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mono', sans-serif;
 }

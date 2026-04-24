@@ -1,25 +1,48 @@
-
-
-a {
-    text-decoration: none; /* Remove a decoração de texto padrão dos links */
-    color: var(--cor-secundaria); /* Define a cor do texto dos links usando uma variável CSS personalizada */
-    display: flex; /* Define o elemento como um contêiner flexível */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do contêiner flexível */
-    text-align: center; /* Centraliza o texto dentro do elemento */
-    border-radius: 12px;
-    font-size: 1.2rem; /* Define o tamanho da fonte dos links */
-    padding: 18px;
-    margin: 10px;
-    position: relative; /* Define a posição do elemento como relativa para permitir o posicionamento absoluto de elementos filhos */
-    transition: 0.3s ease-in; /* Adiciona uma transição suave para as propriedades que mudam, com duração de 0.3 segundos e efeito de easing "ease-in" */
-}
-
-a:hover {
-    transform : scale(1.05); /* Aumenta o tamanho do elemento em 5% quando o mouse estiver sobre ele */
-}
-
+/* ===== Container principal ===== */
 .conteudo_links {
     max-width: 800px;
-    margin: auto; /* Centraliza o contêiner horizontalmente */
-    background-color: white;
+    margin: 40px auto;              /* espaço em cima/baixo + centraliza */
+    padding: 20px;                  /* respiro interno */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;                      /* espaço entre os links */
+
+    background-color: transparent;  /* deixa o fundo do body aparecer */
+}
+
+/* ===== Links como "cards" ===== */
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;                  /* mais equilibrado que 60px */
+    
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    text-decoration: none;
+    color: var(--cor-bg);           /* contraste com fundo branco */
+    background-color: var(--cor-secundaria);
+
+    border-radius: 12px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* profundidade */
+}
+
+/* ===== Hover ===== */
+a:hover {
+    transform: translateY(-4px) scale(1.02); /* sobe levemente + cresce pouco */
+    background-color: #f5f5f5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Clique ===== */
+a:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
